@@ -14,7 +14,16 @@ import {
 } from 'react-router-dom';
 import '../styles.css'
 
-
+import firebase from 'firebase/app';
+var config = {
+    apiKey: "AIzaSyBhhSVYs8BZTZBLi_IzlnBfI1em261oQxg",
+    authDomain: "daily-azadi-quetta.firebaseapp.com",
+    databaseURL: "https://daily-azadi-quetta.firebaseio.com",
+    projectId: "daily-azadi-quetta",
+    storageBucket: "daily-azadi-quetta.appspot.com",
+    messagingSenderId: "33591772397"
+  };
+  firebase.initializeApp(config);
 
 class AppInitializer {
 
