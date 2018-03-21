@@ -12,6 +12,7 @@ import {
     Redirect,
     Switch
 } from 'react-router-dom';
+import '../styles.css'
 
 
 

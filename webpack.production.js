@@ -36,6 +36,11 @@ module.exports = {
 				loader: ['react-hot-loader']
 			},
 			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				loaders: ['style-loader', 'css-loader'],
+			},
+			{
 				loader: "babel-loader",
 
 				// Skip any files outside of your project's `src` directory

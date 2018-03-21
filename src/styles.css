@@ -1,0 +1,28 @@
+body {
+    direction: rtl;
+    background: #f5f5f5;
+    text-align: right;
+    font-family: 'Jameel Noori Nastaleeq';
+}
+.header {
+    background: #e9eff1;
+}
+/* .container-fluid {
+    margin-right: 2rem;
+    margin-left: 2rem;
+} */
+.col-border::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -8px;
+    width: 0.0625rem;
+    height: 100%;
+    border-right: 0.0625rem solid #dfdfdf;
+}
+.title, .title:hover {
+    text-decoration: none;
+    color: inherit;
+}

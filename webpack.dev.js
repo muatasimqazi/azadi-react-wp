@@ -2,7 +2,8 @@ var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {	
+
+module.exports = {
 	devtool: 'cheap-module-source-map',
 	devServer: {
 		historyApiFallback: true, // This will make the server understand "/some-link" routs instead of "/#/some-link"
@@ -20,7 +21,7 @@ module.exports = {
 	},
 	resolve: {
 		modules: [
-			'node_modules', 
+			'node_modules',
 			'src',
 			path.resolve(__dirname, 'src/scripts'),
 			path.resolve(__dirname, 'node_modules')
@@ -38,6 +39,12 @@ module.exports = {
 				],
 				loader: ['react-hot-loader']
 			},
+			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				loaders: ['style-loader', 'css-loader'],
+			},
+
 			{
 				loader: "babel-loader",
 
@@ -68,10 +75,10 @@ module.exports = {
 			_: 'lodash'
 		}),
 
-	    new HtmlWebpackPlugin({
-	        filename: 'index.html',
-	        template: './src/index.html',
-	        hash: false
-	    })
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: './src/index.html',
+			hash: false
+		})
 	]
 }
